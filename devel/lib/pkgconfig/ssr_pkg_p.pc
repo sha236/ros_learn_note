@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/devel
+
+Name: ssr_pkg_p
+Description: Description of ssr_pkg_p
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
