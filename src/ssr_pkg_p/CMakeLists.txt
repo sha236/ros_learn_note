@@ -10,6 +10,7 @@ project(ssr_pkg_p)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  my_msgs_p
 )
 
 ## System dependencies are found with CMake's conventions

@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/install
+
+Name: my_msgs_p
+Description: Description of my_msgs_p
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime roscpp rospy std_msgs
