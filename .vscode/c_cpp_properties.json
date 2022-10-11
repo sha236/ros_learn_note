@@ -9,6 +9,8 @@
         "/home/aspopnly/Clone/catkin_ws/devel/include/**",
         "/opt/ros/noetic/include/**",
         "/home/aspopnly/Clone/catkin_ws/src/atr_pkg/include/**",
+        "/home/aspopnly/Clone/catkin_ws/src/imu_pkg_p/include/**",
+        "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/include/**",
         "/home/aspopnly/Clone/catkin_ws/src/ssr_pkg/include/**",
         "/home/aspopnly/Clone/catkin_ws/src/ros_tutorials/turtlesim/include/**",
         "/home/aspopnly/Clone/catkin_ws/src/wpr_simulation/include/**",
