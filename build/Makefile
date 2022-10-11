@@ -1715,6 +1715,19 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named lidar_node
+
+# Build rule for target.
+lidar_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lidar_node
+.PHONY : lidar_node
+
+# fast build rule for target.
+lidar_node/fast:
+	$(MAKE) -f lidar_pkg_c/CMakeFiles/lidar_node.dir/build.make lidar_pkg_c/CMakeFiles/lidar_node.dir/build
+.PHONY : lidar_node/fast
+
+#=============================================================================
 # Target rules for targets named _turtlesim_generate_messages_check_deps_Kill
 
 # Build rule for target.
@@ -2899,6 +2912,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... lidar_node"
 	@echo "... _turtlesim_generate_messages_check_deps_Kill"
 	@echo "... turtlesim_generate_messages"
 	@echo "... _turtlesim_generate_messages_check_deps_Color"

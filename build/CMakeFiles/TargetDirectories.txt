@@ -222,6 +222,14 @@
 /home/aspopnly/Clone/catkin_ws/build/lidar_pkg/CMakeFiles/rebuild_cache.dir
 /home/aspopnly/Clone/catkin_ws/build/lidar_pkg/CMakeFiles/edit_cache.dir
 /home/aspopnly/Clone/catkin_ws/build/lidar_pkg/CMakeFiles/test.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/install/strip.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/install/local.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/edit_cache.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/test.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/install.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/list_install_components.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/rebuild_cache.dir
+/home/aspopnly/Clone/catkin_ws/build/lidar_pkg_c/CMakeFiles/lidar_node.dir
 /home/aspopnly/Clone/catkin_ws/build/ros_tutorials/turtlesim/CMakeFiles/install/local.dir
 /home/aspopnly/Clone/catkin_ws/build/ros_tutorials/turtlesim/CMakeFiles/list_install_components.dir
 /home/aspopnly/Clone/catkin_ws/build/ros_tutorials/turtlesim/CMakeFiles/rebuild_cache.dir
