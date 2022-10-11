@@ -2066,6 +2066,19 @@ std_srvs_generate_messages_py/fast:
 .PHONY : std_srvs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named vel_node
+
+# Build rule for target.
+vel_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vel_node
+.PHONY : vel_node
+
+# fast build rule for target.
+vel_node/fast:
+	$(MAKE) -f vel_pkg_c/CMakeFiles/vel_node.dir/build.make vel_pkg_c/CMakeFiles/vel_node.dir/build
+.PHONY : vel_node/fast
+
+#=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
@@ -2913,6 +2926,7 @@ help:
 	@echo "... mimic"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
+	@echo "... vel_node"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_eus"

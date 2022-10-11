@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/devel
+
+Name: vel_pkg_cpp
+Description: Description of vel_pkg_cpp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
