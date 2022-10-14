@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/install
+
+Name: task_1_pkg
+Description: Description of task_1_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
