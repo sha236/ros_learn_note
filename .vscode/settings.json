@@ -1,3 +1,11 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/src/imu_pkg_p"
+    "cmake.sourceDirectory": "${workspaceFolder}/src/imu_pkg_p",
+    "python.autoComplete.extraPaths": [
+        "/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
 }
