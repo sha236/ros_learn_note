@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/install
+
+Name: T265Receiver
+Description: Description of T265Receiver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
