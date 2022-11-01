@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/mymsg.js"
+  "/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/position_msgs.js"
+  "/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/user_control_msgs.js"
   "CMakeFiles/my_msgs_p_generate_messages_nodejs"
 )
 

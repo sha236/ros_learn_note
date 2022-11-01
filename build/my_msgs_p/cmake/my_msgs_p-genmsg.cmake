@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "my_msgs_p: 1 messages, 0 services")
+message(STATUS "my_msgs_p: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,16 @@ add_custom_target(_my_msgs_p_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_msgs_p" "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" ""
 )
 
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_custom_target(_my_msgs_p_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_msgs_p" "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" ""
+)
+
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
+add_custom_target(_my_msgs_p_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_msgs_p" "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -30,6 +40,18 @@ add_custom_target(_my_msgs_p_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(my_msgs_p
   "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_cpp(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_cpp(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_msgs_p
@@ -51,6 +73,10 @@ add_dependencies(my_msgs_p_generate_messages my_msgs_p_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" NAME_WE)
 add_dependencies(my_msgs_p_generate_messages_cpp _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_cpp _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_cpp _my_msgs_p_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(my_msgs_p_gencpp)
@@ -63,6 +89,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_p_generate_messages_cpp)
 ### Generating Messages
 _generate_msg_eus(my_msgs_p
   "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_eus(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_eus(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/my_msgs_p
@@ -84,6 +122,10 @@ add_dependencies(my_msgs_p_generate_messages my_msgs_p_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" NAME_WE)
 add_dependencies(my_msgs_p_generate_messages_eus _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_eus _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_eus _my_msgs_p_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(my_msgs_p_geneus)
@@ -96,6 +138,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_p_generate_messages_eus)
 ### Generating Messages
 _generate_msg_lisp(my_msgs_p
   "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_lisp(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_lisp(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_msgs_p
@@ -117,6 +171,10 @@ add_dependencies(my_msgs_p_generate_messages my_msgs_p_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" NAME_WE)
 add_dependencies(my_msgs_p_generate_messages_lisp _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_lisp _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_lisp _my_msgs_p_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(my_msgs_p_genlisp)
@@ -129,6 +187,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_p_generate_messages_lisp)
 ### Generating Messages
 _generate_msg_nodejs(my_msgs_p
   "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_nodejs(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_nodejs(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/my_msgs_p
@@ -150,6 +220,10 @@ add_dependencies(my_msgs_p_generate_messages my_msgs_p_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" NAME_WE)
 add_dependencies(my_msgs_p_generate_messages_nodejs _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_nodejs _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_nodejs _my_msgs_p_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(my_msgs_p_gennodejs)
@@ -162,6 +236,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_p_generate_messages_nodejs)
 ### Generating Messages
 _generate_msg_py(my_msgs_p
   "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_py(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_msgs_p
+)
+_generate_msg_py(my_msgs_p
+  "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_msgs_p
@@ -182,6 +268,10 @@ add_dependencies(my_msgs_p_generate_messages my_msgs_p_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_py _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg" NAME_WE)
+add_dependencies(my_msgs_p_generate_messages_py _my_msgs_p_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg" NAME_WE)
 add_dependencies(my_msgs_p_generate_messages_py _my_msgs_p_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

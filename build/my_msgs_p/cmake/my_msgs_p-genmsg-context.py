@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+messages_str = "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg;/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg;/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
 services_str = ""
 pkg_name = "my_msgs_p"
 dependencies_str = "std_msgs"

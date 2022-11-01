@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/aspopnly/Clone/catkin_ws/build
 include my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py.dir/progress.make
 
 my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_mymsg.py
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_position_msgs.py
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_user_control_msgs.py
 my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py
 
 
@@ -62,13 +64,27 @@ my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG my_msgs_p/mymsg"
 	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg
 
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_position_msgs.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_position_msgs.py: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG my_msgs_p/position_msgs"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg
+
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_user_control_msgs.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_user_control_msgs.py: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG my_msgs_p/user_control_msgs"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg
+
 /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_mymsg.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for my_msgs_p"
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_position_msgs.py
+/home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_user_control_msgs.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for my_msgs_p"
 	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg --initpy
 
 my_msgs_p_generate_messages_py: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py
 my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_mymsg.py
+my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_position_msgs.py
+my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/_user_control_msgs.py
 my_msgs_p_generate_messages_py: /home/aspopnly/Clone/catkin_ws/devel/lib/python3/dist-packages/my_msgs_p/msg/__init__.py
 my_msgs_p_generate_messages_py: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_py.dir/build.make
 

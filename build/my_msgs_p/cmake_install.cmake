@@ -38,7 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_msgs_p/msg" TYPE FILE FILES "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_msgs_p/msg" TYPE FILE FILES
+    "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg"
+    "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg"
+    "/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

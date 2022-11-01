@@ -52,6 +52,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   mymsg.msg
+  position_msgs.msg
+  user_control_msgs.msg
 )
 
 ## Generate services in the 'srv' folder

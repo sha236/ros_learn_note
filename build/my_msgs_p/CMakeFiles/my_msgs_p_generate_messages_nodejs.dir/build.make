@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/aspopnly/Clone/catkin_ws/build
 include my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs.dir/progress.make
 
 my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/mymsg.js
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/position_msgs.js
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/user_control_msgs.js
 
 
 /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/mymsg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +63,20 @@ my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/ca
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from my_msgs_p/mymsg.msg"
 	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg
 
+/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/position_msgs.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/position_msgs.js: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from my_msgs_p/position_msgs.msg"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg
+
+/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/user_control_msgs.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/user_control_msgs.js: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from my_msgs_p/user_control_msgs.msg"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg
+
 my_msgs_p_generate_messages_nodejs: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs
 my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/mymsg.js
+my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/position_msgs.js
+my_msgs_p_generate_messages_nodejs: /home/aspopnly/Clone/catkin_ws/devel/share/gennodejs/ros/my_msgs_p/msg/user_control_msgs.js
 my_msgs_p_generate_messages_nodejs: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_nodejs.dir/build.make
 
 .PHONY : my_msgs_p_generate_messages_nodejs

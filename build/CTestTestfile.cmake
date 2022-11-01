@@ -6,9 +6,9 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("ros_tutorials/ros_tutorials")
-subdirs("Brain")
 subdirs("atr_pkg")
 subdirs("my_msgs_p")
+subdirs("Brain")
 subdirs("atr_pkg_p")
 subdirs("ros_tutorials/roscpp_tutorials")
 subdirs("ros_tutorials/rospy_tutorials")

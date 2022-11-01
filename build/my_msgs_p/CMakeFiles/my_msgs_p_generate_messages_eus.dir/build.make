@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/aspopnly/Clone/catkin_ws/build
 include my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus.dir/progress.make
 
 my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/mymsg.l
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/position_msgs.l
+my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/user_control_msgs.l
 my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/manifest.l
 
 
@@ -62,12 +64,24 @@ my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catki
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from my_msgs_p/mymsg.msg"
 	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/mymsg.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg
 
+/home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/position_msgs.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/position_msgs.l: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from my_msgs_p/position_msgs.msg"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/position_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg
+
+/home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/user_control_msgs.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/user_control_msgs.l: /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from my_msgs_p/user_control_msgs.msg"
+	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg/user_control_msgs.msg -Imy_msgs_p:/home/aspopnly/Clone/catkin_ws/src/my_msgs_p/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p my_msgs_p -o /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg
+
 /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for my_msgs_p"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aspopnly/Clone/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for my_msgs_p"
 	cd /home/aspopnly/Clone/catkin_ws/build/my_msgs_p && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p my_msgs_p std_msgs
 
 my_msgs_p_generate_messages_eus: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus
 my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/mymsg.l
+my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/position_msgs.l
+my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/msg/user_control_msgs.l
 my_msgs_p_generate_messages_eus: /home/aspopnly/Clone/catkin_ws/devel/share/roseus/ros/my_msgs_p/manifest.l
 my_msgs_p_generate_messages_eus: my_msgs_p/CMakeFiles/my_msgs_p_generate_messages_eus.dir/build.make
 
