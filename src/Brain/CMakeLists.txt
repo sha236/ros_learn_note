@@ -10,7 +10,6 @@ project(Brain)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   geometry_msgs
-  my_msgs_p
 )
 
 ## System dependencies are found with CMake's conventions

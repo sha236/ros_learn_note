@@ -10,6 +10,7 @@ project(ControllerReceiver)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
+  robot_msgs
 )
 
 ## System dependencies are found with CMake's conventions

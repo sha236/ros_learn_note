@@ -1,0 +1,8 @@
+prefix=/home/aspopnly/Clone/catkin_ws/install
+
+Name: robot_msgs
+Description: Description of robot_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime roscpp rospy std_msgs

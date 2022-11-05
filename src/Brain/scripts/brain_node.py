@@ -2,14 +2,14 @@
 #coding=utf-8
 
 from math import sqrt
-from typing_extensions import Self
 
 import rospy
-from my_msgs_p import posotion_msgs,user_control_msgs
+from robot_msgs.msg import position_msg,user_control_msg
 from geometry_msgs.msg import Twist
 
 # 场地信息
 v_weight = 0.1
+orin_weight = 0.1
 switch_distance = 0.1
 H = 7
 L = 2
@@ -45,6 +45,7 @@ class brain():
         self.need_stop = 1
         self.target_point_number = 1
         self.position = P_Points[0]
+        self.z_orin = 0
 
     def v_set(self):
         raw_v_x = self.P_Points[self.target_point_number][0] - self.position[0]
@@ -54,21 +55,17 @@ class brain():
         output_v_y = raw_v_y/raw_size*self.v_weight
         return [output_v_x,output_v_y]
 
+    #设逆时针为正方向
+    def orin_set(self):
+        orin_speed = -orin_weight*self.z_orin
+        return orin_speed
+
     def switch_point(self):
         if (self.position[0]-self.P_Points[self.target_point_number][0])*(self.position[0]-self.P_Points[self.target_point_number][0])+(self.position[1]-self.P_Points[self.target_point_number][1])*(self.position[1]-self.P_Points[self.target_point_number][1])<self.switch_distance*self.switch_distance:
             return True
         else:
             return False
 
-super_brain = brain(P_points,P_order,v_weight,switch_distance)
-vel_msg = Twist()
-
-if __name__ == "__main__":
-    rospy.init_node("brain_node")
-    sub_position_msgs = rospy.Subscriber("position_msg",posotion_msgs,position_msg_callback,queue_size=10)
-    sub_user_control_msgs = rospy.Subscriber("user_control_msg",user_control_msgs,user_control_msg_callback,queue_size=10)
-    vel_pub = rospy.Publisher("/cmd_vel",Twist,queue_size=10)
-    rospy.spin()
 
 
 def position_msg_callback(msg):
@@ -82,20 +79,24 @@ def position_msg_callback(msg):
 
     super_brain.position[0] = msg.x_axis
     super_brain.position[1] = msg.y_axis
+    super_brain.z_orin = msg.z_orin
     if not super_brain.need_stop:
         if not super_brain.target_point_number == 13:
             if super_brain.switch_point():
                 super_brain.target_point_number+=1
                 vel_msg.linear.x,vel_msg.linear.y =  super_brain.v_set()
+                vel_msg.angular.z = super_brain.orin_set()
                 vel_pub.publish(vel_msg)
             else:
                 vel_msg.linear.x,vel_msg.linear.y =  super_brain.v_set()
+                vel_msg.angular.z = super_brain.orin_set()
                 vel_pub.publish(vel_msg)
         else:
             if super_brain.switch_point:
                 super_brain.need_stop = 1
             else:
                 vel_msg.linear.x,vel_msg.linear.y =  super_brain.v_set()
+                vel_msg.angular.z = super_brain.orin_set()
                 vel_pub.publish(vel_msg)
     else:
         vel_msg.linear.x = 0
@@ -109,3 +110,18 @@ def user_control_msg_callback(msg):
     super_brain.need_stop = msg.need_stop
     super_brain.target_point_number = 1
     super_brain.position = super_brain.P_Points[0]
+    
+
+if __name__ == "__main__":
+    super_brain = brain(P_points,P_order,v_weight,switch_distance)
+    vel_msg = Twist()
+    rospy.init_node("brain_node")
+    sub_position_msgs = rospy.Subscriber("Position_msg",position_msg,position_msg_callback,queue_size=10)
+    sub_user_control_msgs = rospy.Subscriber("User_Control_msg",user_control_msg,user_control_msg_callback,queue_size=10)
+    vel_pub = rospy.Publisher("/cmd_vel",Twist,queue_size=10)
+    rospy.spin()
+
+
+
+
+
