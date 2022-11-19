@@ -6,6 +6,9 @@ import serial
 import struct
 from geometry_msgs.msg import Twist
 
+speed_bias = 1 
+rotate_bias = 1 
+
 class SerialPort:
     def __init__(self,port,buand):
         self.port = serial.Serial(port,buand)
@@ -15,10 +18,6 @@ class SerialPort:
         self.vx = 0
         self.vy = 0
         self.vw = 0
-
-    def port_open(self):
-        if not self.port.is_open():
-            self.port.open('')
 
     def read_data(self):
         global is_exit
@@ -39,7 +38,7 @@ class SerialPort:
     def port_close(self):
         self.port.close()
 
-serialPort = '/dev/ttyUSB0'
+serialPort = '/dev/ttyACM1'
 baudRate = 115200
 BAG_LENGTH = 32
 is_exit = False
@@ -47,17 +46,20 @@ data_bytes = bytearray()
 
 def SpeedSerialCallBack(msg):
     global SpeedSerialPort
-    SpeedSerialPort.port_open()
-    SpeedSerialPort.vx = msg.linear.x
-    SpeedSerialPort.vy = msg.linear.y
-    SpeedSerialPort.vw = msg.angular.z
-    SendPackedData = struct.pack('<fff',SpeedSerialPort.vx,SpeedSerialPort.vy,SpeedSerialPort.vw)
-    SpeedSerialPort.write_data(SendPackedData)
+    SpeedSerialPort.vx = msg.linear.x * speed_bias
+    SpeedSerialPort.vy = msg.linear.y * speed_bias
+    SpeedSerialPort.vw = msg.angular.z * rotate_bias
+
+    print(msg.linear.x)
+    SendPackedData = struct.pack('<fff',SpeedSerialPort.vy,SpeedSerialPort.vx,SpeedSerialPort.vw)
+    print(SendPackedData)
+    SpeedSerialPort.port.write(SendPackedData)
 
 
 
 if __name__ == "__main__":
     rospy.init_node("serial_node")
-    SpeedSerialPort = SerialPort(serialPort,baudRate)
     T265_sub = rospy.Subscriber("/cmd_vel",Twist,SpeedSerialCallBack,queue_size= 10)
+    SpeedSerialPort = SerialPort(serialPort,baudRate)
+    rospy.spin()
     
