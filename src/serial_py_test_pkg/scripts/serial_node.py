@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-from multiprocessing.util import is_exiting
 import rospy
 import serial
 import struct
+from geometry_msgs.msg import Twist
 
 class SerialPort:
     def __init__(self,port,buand):
@@ -12,6 +12,9 @@ class SerialPort:
         self.port.close()
         if not self.port.is_open:
             self.port.open()
+        self.vx = 0
+        self.vy = 0
+        self.vw = 0
 
     def port_open(self):
         if not self.port.is_open():
@@ -28,6 +31,9 @@ class SerialPort:
                 is_exit =True
 
         return rec_str
+    
+    def write_data(self,send_data):
+        serial.Serial.write(send_data)
 
 
     def port_close(self):
@@ -39,12 +45,19 @@ BAG_LENGTH = 32
 is_exit = False
 data_bytes = bytearray()    
 
+def SpeedSerialCallBack(msg):
+    global SpeedSerialPort
+    SpeedSerialPort.port_open()
+    SpeedSerialPort.vx = msg.linear.x
+    SpeedSerialPort.vy = msg.linear.y
+    SpeedSerialPort.vw = msg.angular.z
+    SendPackedData = struct.pack('<fff',SpeedSerialPort.vx,SpeedSerialPort.vy,SpeedSerialPort.vw)
+    SpeedSerialPort.write_data(SendPackedData)
+
+
+
 if __name__ == "__main__":
     rospy.init_node("serial_node")
-
-    m1SerialPort = SerialPort(serialPort,baudRate)
-    temp_data = m1SerialPort.read_data()
-    buf_data = struct.unpack('<iffffffi',temp_data)
-    print(temp_data)
+    SpeedSerialPort = SerialPort(serialPort,baudRate)
+    T265_sub = rospy.Subscriber("/cmd_vel",Twist,SpeedSerialCallBack,queue_size= 10)
     
-
