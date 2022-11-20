@@ -1,1 +1,2 @@
 int64 need_stop
+int64 serial_port_status

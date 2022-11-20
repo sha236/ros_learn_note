@@ -7,6 +7,8 @@ from robot_msgs.msg import user_control_msg
 
 def JoyCallBack(msg):
     global control_info
+    if msg.buttons[1] ==1:
+        control_info.serial_port_status = 1 - control_info.serial_port_status
     if msg.buttons[0] == 1:
         control_info.need_stop = 1 - control_info.need_stop
     con_pub.publish(control_info)
@@ -19,4 +21,5 @@ if __name__ == "__main__":
     con_pub = rospy.Publisher("User_Control_msg",user_control_msg,queue_size= 10)
     control_info = user_control_msg()
     control_info.need_stop = 1
+    control_info.serial_port_status = 1
     rospy.spin()

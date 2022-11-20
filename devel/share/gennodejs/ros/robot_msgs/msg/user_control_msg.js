@@ -19,6 +19,7 @@ class user_control_msg {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.need_stop = null;
+      this.serial_port_status = null;
     }
     else {
       if (initObj.hasOwnProperty('need_stop')) {
@@ -27,6 +28,12 @@ class user_control_msg {
       else {
         this.need_stop = 0;
       }
+      if (initObj.hasOwnProperty('serial_port_status')) {
+        this.serial_port_status = initObj.serial_port_status
+      }
+      else {
+        this.serial_port_status = 0;
+      }
     }
   }
 
@@ -34,6 +41,8 @@ class user_control_msg {
     // Serializes a message object of type user_control_msg
     // Serialize message field [need_stop]
     bufferOffset = _serializer.int64(obj.need_stop, buffer, bufferOffset);
+    // Serialize message field [serial_port_status]
+    bufferOffset = _serializer.int64(obj.serial_port_status, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -43,11 +52,13 @@ class user_control_msg {
     let data = new user_control_msg(null);
     // Deserialize message field [need_stop]
     data.need_stop = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [serial_port_status]
+    data.serial_port_status = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 8;
+    return 16;
   }
 
   static datatype() {
@@ -57,13 +68,14 @@ class user_control_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '8171a97e85519dd4fe2e897b160f54e4';
+    return '2bfc4ee5d247898e4b10bf74cd215fa3';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     int64 need_stop
+    int64 serial_port_status
     `;
   }
 
@@ -78,6 +90,13 @@ class user_control_msg {
     }
     else {
       resolved.need_stop = 0
+    }
+
+    if (msg.serial_port_status !== undefined) {
+      resolved.serial_port_status = msg.serial_port_status;
+    }
+    else {
+      resolved.serial_port_status = 0
     }
 
     return resolved;

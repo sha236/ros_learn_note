@@ -24,10 +24,12 @@ struct user_control_msg_
   typedef user_control_msg_<ContainerAllocator> Type;
 
   user_control_msg_()
-    : need_stop(0)  {
+    : need_stop(0)
+    , serial_port_status(0)  {
     }
   user_control_msg_(const ContainerAllocator& _alloc)
-    : need_stop(0)  {
+    : need_stop(0)
+    , serial_port_status(0)  {
   (void)_alloc;
     }
 
@@ -35,6 +37,9 @@ struct user_control_msg_
 
    typedef int64_t _need_stop_type;
   _need_stop_type need_stop;
+
+   typedef int64_t _serial_port_status_type;
+  _serial_port_status_type serial_port_status;
 
 
 
@@ -65,7 +70,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::robot_msgs::user_control_msg_<ContainerAllocator1> & lhs, const ::robot_msgs::user_control_msg_<ContainerAllocator2> & rhs)
 {
-  return lhs.need_stop == rhs.need_stop;
+  return lhs.need_stop == rhs.need_stop &&
+    lhs.serial_port_status == rhs.serial_port_status;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +128,12 @@ struct MD5Sum< ::robot_msgs::user_control_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8171a97e85519dd4fe2e897b160f54e4";
+    return "2bfc4ee5d247898e4b10bf74cd215fa3";
   }
 
   static const char* value(const ::robot_msgs::user_control_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8171a97e85519dd4ULL;
-  static const uint64_t static_value2 = 0xfe2e897b160f54e4ULL;
+  static const uint64_t static_value1 = 0x2bfc4ee5d247898eULL;
+  static const uint64_t static_value2 = 0x4b10bf74cd215fa3ULL;
 };
 
 template<class ContainerAllocator>
@@ -147,6 +153,7 @@ struct Definition< ::robot_msgs::user_control_msg_<ContainerAllocator> >
   static const char* value()
   {
     return "int64 need_stop\n"
+"int64 serial_port_status\n"
 ;
   }
 
@@ -166,6 +173,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.need_stop);
+      stream.next(m.serial_port_status);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -186,6 +194,8 @@ struct Printer< ::robot_msgs::user_control_msg_<ContainerAllocator> >
   {
     s << indent << "need_stop: ";
     Printer<int64_t>::stream(s, indent + "  ", v.need_stop);
+    s << indent << "serial_port_status: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.serial_port_status);
   }
 };
 
